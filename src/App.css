@@ -1,33 +1,96 @@
-.App {
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.main-nav {
+  height: 50px;
+  -webkit-box-shadow: 0 12px 4px -12px #777;
+  -moz-box-shadow: 0 12px 4px -12px #777;
+  box-shadow: 0 12px 4px -12px #777;
+}
+
+.profile-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100vw;
+  min-height: calc(100vh - 50px);
+}
+
+.profile-content {
+  position: relative;
+  width: 70vw;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.profile-random {
+  width: 25vw;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.field-A,
+.field-B {
+  position: relative;
+  background-color: rgb(24, 37, 224);
+  border: 2px solid white;
+  width: 50%;
+}
+.field-A-player,
+.field-B-player {
+  display: flex;
+  position: relative;
+  border: 2px solid white;
+  height: 2em;
+  width: 2em;
+}
+
+.field-A-player-number,
+.field-B-player-number {
+  position: relative;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: white;
+  margin-left: 5px;
+  padding: 5px;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.field-A > .field-A-center-circle {
+  background: rgb(24, 37, 224);
+  width: 20%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  border: 2px solid white;
+  border-right: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.field-B > .field-B-center-circle {
+  background: rgb(24, 37, 224);
+  width: 20%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 100px;
+  border: 2px solid white;
+  border-left: none;
 }
